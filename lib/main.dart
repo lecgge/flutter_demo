@@ -5,6 +5,8 @@ import 'Input.dart';
 import 'ParentWidget.dart';
 import 'ParentWidgetC.dart';
 import 'TestState.dart';
+import 'container/Container.dart';
+import 'layout/contraints.dart';
 import 'navigator/home.dart';
 
 void main() {
@@ -23,9 +25,11 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "new_page": (context) => const NewRoute(),
-        "/": (context) => TestInput()
+        "/": (context) => TestInput(),
+        "Constraints": (context) => const Constraints(),
+        "Container": (context) => Containers(),
       },
-      initialRoute: "/",
+      initialRoute: "Container",
     );
   }
 }
