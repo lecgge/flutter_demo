@@ -4,6 +4,7 @@ import 'package:flutter_demo/TapboxA.dart';
 import 'Input.dart';
 import 'ParentWidget.dart';
 import 'ParentWidgetC.dart';
+import 'ScaffoldTest.dart';
 import 'TestState.dart';
 import 'container/Container.dart';
 import 'layout/contraints.dart';
@@ -28,8 +29,9 @@ class MyApp extends StatelessWidget {
         "/": (context) => TestInput(),
         "Constraints": (context) => const Constraints(),
         "Container": (context) => Containers(),
+        "ScaffoldTest": (context) => ScaffoldTest(),
       },
-      initialRoute: "Container",
+      initialRoute: "ScaffoldTest",
     );
   }
 }
