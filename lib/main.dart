@@ -5,6 +5,7 @@ import 'Input.dart';
 import 'ParentWidget.dart';
 import 'ParentWidgetC.dart';
 import 'ScaffoldTest.dart';
+import 'ScrollerWidget/Scroller.dart';
 import 'TestState.dart';
 import 'container/Container.dart';
 import 'layout/contraints.dart';
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
         "Constraints": (context) => const Constraints(),
         "Container": (context) => Containers(),
         "ScaffoldTest": (context) => ScaffoldTest(),
+        "Scroller": (context) => Scroller(),
       },
-      initialRoute: "ScaffoldTest",
+      initialRoute: "Scroller",
     );
   }
 }
