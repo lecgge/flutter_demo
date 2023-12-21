@@ -28,7 +28,7 @@ class _ParentWidget extends State<ParentWidget>{
 }
 
 class TapBoxB extends StatelessWidget{
-  TapBoxB({Key? key,this.active:false,required this.onChanged})
+  TapBoxB({Key? key,this.active =false,required this.onChanged})
     :super(key: key);
 
   final bool active;

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/TapboxA.dart';
 
 import 'Input.dart';
-import 'ParentWidget.dart';
-import 'ParentWidgetC.dart';
 import 'ScaffoldTest.dart';
 import 'ScrollerWidget/Scroller.dart';
-import 'TestState.dart';
+import 'color/ColorTest.dart';
+import 'color/ThemeTestRoute.dart';
 import 'container/Container.dart';
+import 'functionWidget/MyInheritedWidget.dart';
+import 'functionWidget/TestFunctionWidget.dart';
 import 'layout/contraints.dart';
 import 'navigator/home.dart';
 
@@ -22,18 +22,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       routes: {
+        "MyHomePage": (context) => const MyHomePage(title: "",),
         "new_page": (context) => const NewRoute(),
         "/": (context) => TestInput(),
         "Constraints": (context) => const Constraints(),
         "Container": (context) => Containers(),
         "ScaffoldTest": (context) => ScaffoldTest(),
         "Scroller": (context) => Scroller(),
+        "TestFunctionWidge": (context) => TestFunctionWidge(),
+        "InheritedWidgetTestRoute": (context) => InheritedWidgetTestRoute(),
+        "ThemeTestRoute": (context) => ThemeTestRoute(),
       },
-      initialRoute: "Scroller",
+      initialRoute: "ThemeTestRoute",
     );
   }
 }
@@ -52,8 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blue,
-      child: Row(
-        children: [const Text("A")],
+      child: Column(
+        children: [
+          NavBar(color: Colors.blue,title: "标题",),
+          NavBar(color: Colors.white,title: "标题",),
+        ],
       ),
     );
   }
