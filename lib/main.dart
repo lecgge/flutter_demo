@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'Input.dart';
 import 'ScaffoldTest.dart';
 import 'ScrollerWidget/Scroller.dart';
+import 'chap8/PointerEventTest.dart';
+import 'chap9/TestAnimation.dart';
 import 'color/ColorTest.dart';
 import 'color/ThemeTestRoute.dart';
 import 'container/Container.dart';
@@ -33,8 +35,10 @@ class MyApp extends StatelessWidget {
         "TestFunctionWidge": (context) => TestFunctionWidge(),
         "InheritedWidgetTestRoute": (context) => InheritedWidgetTestRoute(),
         "ThemeTestRoute": (context) => ThemeTestRoute(),
+        "PointerEventTest": (context) => PointerEventTest(),
+        "TestAnimation": (context) => TestAnimation(),
       },
-      initialRoute: "ThemeTestRoute",
+      initialRoute: "TestAnimation",
     );
   }
 }
